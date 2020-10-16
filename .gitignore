@@ -1,0 +1,10 @@
+.idea/
+config.php
+admin/config.php
+image
+
+/node_modules/
+/.git/
+/**/Thumbs.db
+/**/*.DS_Store
+/**/.directory

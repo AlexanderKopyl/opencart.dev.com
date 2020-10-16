@@ -1,0 +1,1619 @@
+2020-10-07 12:05:55 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-07 12:07:00 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-07 12:07:06 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-07 12:09:53 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-07 12:11:07 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-07 12:26:43 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 9:01:07 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 9:38:51 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 9:43:44 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 9:47:50 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 11:40:26 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 11:51:07 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 11:51:14 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 11:52:35 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 12:05:13 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 12:06:16 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 12:07:46 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 12:21:33 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 15:00:33 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+
+FILE: admin/controller/common/login.php
+CODE: if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], HTTP_SERVER) === 0 || strpos($this->request->post['redirect'], HTTPS_SERVER) === 0)) {
+LINE: 28
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 15:00:43 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+
+FILE: admin/controller/common/login.php
+CODE: if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], HTTP_SERVER) === 0 || strpos($this->request->post['redirect'], HTTPS_SERVER) === 0)) {
+LINE: 28
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-14 15:11:55 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+
+FILE: admin/controller/common/login.php
+CODE: if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], HTTP_SERVER) === 0 || strpos($this->request->post['redirect'], HTTPS_SERVER) === 0)) {
+LINE: 30
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-16 7:24:18 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+
+FILE: admin/controller/common/login.php
+CODE: if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], HTTP_SERVER) === 0 || strpos($this->request->post['redirect'], HTTPS_SERVER) === 0)) {
+LINE: 30
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+2020-10-16 7:32:57 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD:  Activity User
+
+FILE: admin/controller/common/column_left.php
+CODE: $user = array();
+LINE: 460
+
+FILE: admin/controller/common/login.php
+CODE: if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], HTTP_SERVER) === 0 || strpos($this->request->post['redirect'], HTTPS_SERVER) === 0)) {
+LINE: 30
+----------------------------------------------------------------
+MOD: 301 redirect manager
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['languages'] = $this->model_localisation_language->getLanguages();
+LINE: 337
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <div class="tab-pane" id="tab-store">
+LINE: 113
+
+FILE: catalog/controller/common/header.php
+CODE: public function index() {
+LINE: 31
+----------------------------------------------------------------
+MOD: OCMOD Editor for OpenCart 3.0
+
+FILE: admin/controller/startup/permission.php
+CODE: $extension = array(
+LINE: 18
+
+FILE: admin/controller/marketplace/modification.php
+CODE: public function index() {
+LINE: 18
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 670
+CODE: $data['modifications'][] = array(
+LINE: 692
+CODE: public function index() {
+LINE: 10
+CODE: $this->response->redirect($this->url->link('marketplace/modification', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 517
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------

@@ -1,0 +1,212 @@
+<?php
+/**
+ * Liqpay Payment Module
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category        Liqpay
+ * @package         Payment
+ * @version         3.0
+ * @author          Liqpay
+ * @copyright       Copyright (c) 2014 Liqpay
+ * @license         http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ *
+ * EXTENSION INFORMATION
+ *
+ * OpenCart         1.5.6
+ * LiqPay API       https://www.liqpay.com/ru/doc
+ *
+ */
+?>
+
+{{ header }}{{ column_left }} 
+<div id="content">
+
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+        <button type="submit" form="form" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
+        <a href="{{ cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
+      <h1>{{ heading_title }}</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %} 
+        <li><a href="{{ breadcrumb['href'] }}">{{ breadcrumb['text'] }}</a></li>
+        {% endfor %} 
+      </ul>
+    </div>
+  </div>
+
+
+<div class="container-fluid">
+	<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title"><i class="fa fa-pencil"></i> {{ heading_title }}</h3>
+	</div>
+	<div class="panel-body">
+		<form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-pay2pay" class="form-horizontal">
+                   
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-payment_liqpay_public_key">{{ entry_public_key }}</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="payment_liqpay_public_key" value="{{ payment_liqpay_public_key }}" placeholder="{{ entry_public_key }}" id="input-payment_liqpay_public_key" class="form-control" />
+                        </div>
+                        {% if (error_public_key) %} 
+                        <div class="text-danger">{{ error_public_key }}</div>
+                        {% endif %}                        
+                    </div>       
+                    
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-payment_liqpay_private_key">{{ entry_private_key }}</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="payment_liqpay_private_key" value="{{ payment_liqpay_private_key }}" placeholder="{{ entry_private_key }}" id="input-payment_liqpay_private_key" class="form-control" />
+                        </div>
+                        {% if (error_private_key) %} 
+                        <div class="text-danger">{{ error_private_key }}</div>
+                        {% endif %}                        
+                    </div>           
+                               
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-payment_liqpay_action">{{ entry_action }}</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="payment_liqpay_action" value="{{ payment_liqpay_action }}" placeholder="{{ entry_action }}" id="input-payment_liqpay_action" class="form-control" />
+                        </div>
+                        {% if (error_action) %} 
+                        <div class="text-danger">{{ error_action }}</div>
+                        {% endif %}                        
+                    </div>    
+                    
+                    <div class="form-group"> 
+                        <label class="col-sm-2 control-label">{{ entry_pay_way }}</label>
+                        <div class="col-sm-10">
+
+                            <label class="control-label" onclick="payWay()"><input type="checkbox" value="card" name="card" class="pay_way"  
+                            {% if ("card" in payment_liqpay_pay_way) %}checked="checked"{% endif %}
+                            /> Карта</label>
+                           
+
+                            <label class="control-label" onclick="payWay()" ><input type="checkbox" value="liqpay" name="liqpay" class="pay_way" 
+                            {% if ("liqpay" in payment_liqpay_pay_way) %}checked="checked"{% endif %}
+                            /> Liqpay</label>                                                      
+
+                            <label class="control-label" onclick="payWay()"><input type="checkbox" value="privat24" name="privat24" class="pay_way"
+                            {% if ("privat24" in payment_liqpay_pay_way ) %}checked="checked"{% endif %}
+                            /> Privat24</label>                             
+
+                            <label class="control-label" onclick="payWay()"><input type="checkbox" value="invoice" name="invoice" class="pay_way" 
+                           {% if ("invoice" in payment_liqpay_pay_way) %}checked="checked"{% endif %}
+                            /> Invoice</label> 
+                            
+                            <label class="control-label" onclick="payWay()"><input type="checkbox" value="cache" name="cache" class="pay_way"
+                            {% if ("cache" in payment_liqpay_pay_way) %}checked="checked"{% endif %}
+                            /> Наличными</label>    
+                            
+                            <label class="control-label" onclick="payWay()"><input type="checkbox" value="masterpass" name="masterpass" class="pay_way"
+                            {% if ("masterpass" in payment_liqpay_pay_way) %}checked="checked"{% endif %}
+                            />Masterpass</label>   
+                            
+                            <label class="control-label" onclick="payWay()"><input type="checkbox" value="moment_part" name="moment_part" class="pay_way"
+                            {% if ("moment_part" in payment_liqpay_pay_way) %}checked="checked"{% endif %}
+                            />Рассрочка</label>                    
+                            
+                            <label class="control-label" onclick="payWay()"><input type="checkbox" value="qr" name="qr" class="pay_way"
+                            {% if ("qr" in payment_liqpay_pay_way) %}checked="checked"{% endif %}
+                            />QR-код</label>                            
+                            
+
+                            <input type="text" id="pay_way" name="payment_liqpay_pay_way" 
+                            value="{{ payment_liqpay_pay_way }}" hidden/>
+
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="col-sm-2 control-label" for="input-payment_liqpay_total">{{ entry_total }}</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="payment_liqpay_total" value="{{ payment_liqpay_total }}" placeholder="{{ entry_total }}" id="input-payment_liqpay_total" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="col-sm-2 control-label">{{ entry_order_status }}</label>                   
+                        <div class="col-sm-10">
+                            <select class="form-control" name="payment_liqpay_order_status_id">
+                                 {% for order_status in order_statuses %}
+                                    {% set order_status_id = order_status['order_status_id'] %}
+                                    {% set sel = order_status_id == payment_liqpay_order_status_id %}
+ 
+                                    <option {% if (sel) %}selected="selected"{% endif %} value="{{ order_status_id }}">
+                                        {{ order_status['name'] }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="col-sm-2 control-label">{{ entry_geo_zone }}</label> 
+                        <div class="col-sm-10">
+                            <select class="form-control" name="payment_liqpay_geo_zone_id">
+                                <option value="0">{{ text_all_zones }}</option>
+                                 {% for geo_zone in geo_zones %}
+                                    {% set geo_zone_id = geo_zone['geo_zone_id'] %}
+                                    {% set sel = geo_zone_id == payment_liqpay_geo_zone_id %}
+                                    <option {% if (sel) %}selected="selected"{% endif %} value="{{ geo_zone_id }}">
+                                        {{ geo_zone['name'] }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="col-sm-2 control-label">{{ entry_status }}</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="payment_liqpay_status">
+                                <option {% if (payment_liqpay_status) %}selected="selected"{% endif %} value="1">
+                                    {{ text_enabled }}
+                                </option>
+                                <option {% if (not payment_liqpay_status) %}selected="selected"{% endif %} value="0">
+                                    {{ text_disabled }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="col-sm-2 control-label">{{ entry_language }}</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="payment_liqpay_language">
+                                <option {% if (payment_liqpay_language == 'ua') %}selected="selected"{% endif %} value="ua">
+                                    ua
+                                </option>
+                                <option {% if (payment_liqpay_language == 'en') %}selected="selected"{% endif %} value="en">
+                                    en
+                                </option>
+                                <option {% if (payment_liqpay_language == 'ru') %}selected="selected"{% endif %} value="ru">
+                                    ru
+                                </option>                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="col-sm-2 control-label">{{ entry_sort_order }}</label>
+                        <div class="col-sm-10">
+                          <input class="form-control" type="text" name="payment_liqpay_sort_order" value="{{ payment_liqpay_sort_order }}" size="1" />
+                        </div>
+                    </tr>
+
+    </form>
+  </div>
+</div>
+<script>
+        function payWay(){
+         
+            var elems = $(".pay_way:checked");
+            var str = '';
+            elems.each(function(){
+                str += $(this).prop("name") + ',';
+            })
+            $("#pay_way").val(str);
+
+        }
+</script>
+{{ footer }}
