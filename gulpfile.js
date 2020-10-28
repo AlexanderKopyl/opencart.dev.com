@@ -1,85 +1,144 @@
-let domain       = 'opencart.dev.com'; //Local domain name
-let theme        = 'default_dev'; //Custom theme opencart name
-let preprocessor = 'scss'; // Preprocessor (sass, scss, less, styl)
+const proxyURL = 'opencart.dev.com';
+let theme        = 'catalog/view/theme/default_dev'; //Custom theme opencart name
 let fileswatch   = '+(twig|php|tpl)'; // File monitoring, extensions
 
+// Load Gulp...of course
+const { src, dest, task, watch, series, parallel } = require('gulp');
 
-const { src, dest, parallel, series, watch } = require('gulp');
-const sass           = require('gulp-sass');
-const scss           = require('gulp-sass');
-const less           = require('gulp-less');
-const styl           = require('gulp-stylus');
-const cleancss       = require('gulp-clean-css');
-const concat         = require('gulp-concat');
-const browserSync    = require('browser-sync').create();
-const uglify         = require('gulp-uglify-es').default;
-const autoprefixer   = require('gulp-autoprefixer');
-const newer          = require('gulp-newer');
-const rsync          = require('gulp-rsync');
-const del            = require('del');
+// CSS related plugins
+var sass = require('gulp-sass');
+var concatCss = require('gulp-concat-css');
+let cleanCSS = require('gulp-clean-css');
 
-// Local Server
-function browsersync() {
+// JS related plugins
+var uglify = require('gulp-uglify');
+var babelify = require('babelify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var stripDebug = require('gulp-strip-debug');
+
+// Utility plugins
+var rename = require('gulp-rename');
+var sourcemaps = require('gulp-sourcemaps');
+var notify = require('gulp-notify');
+var plumber = require('gulp-plumber');
+var options = require('gulp-options');
+var gulpif = require('gulp-if');
+
+// Browers related plugins
+var browserSync = require('browser-sync').create();
+
+// Project related variables
+var styleSRC = `${theme}/scss/*.scss`;
+var stylesBootstrap = `catalog/view/javascript/bootstrap/css/bootstrap.min.css`;
+var stylesfont_awesome = `catalog/view/javascript/font-awesome/css/font-awesome.min.css`;
+
+
+var styleURL = `${theme}/stylesheet/`;
+var mapURL = './';
+
+var jsSRC = `${theme}/js/`;
+var jsFront = 'app.js';
+var jsFiles = [jsFront];
+var jsURL = `${theme}/js/`;
+
+var imgSRC = `${theme}/image/**/*`;
+var imgURL = `${theme}/image/`;
+
+var fontsSRC = `${theme}/fonts/**/*`;
+var fontsURL = `${theme}/fonts/`;
+
+var styleWatch = `${theme}/scss/**/*.scss`;
+var jsWatch = `${theme}/js/**/*.js`;
+var imgWatch = `${theme}/image/**/*.*`;
+var fontsWatch = `${theme}/fonts/**/*.*`;
+var twigWatch = `${theme}/template/**/*.twig`;
+
+// Tasks
+function browser_sync() {
     browserSync.init({
-        proxy: `${domain}`,
-        //server: { baseDir: 'app' },
-        notify: false,
-        // online: false, // Work offline without internet connection
-        // tunnel: true,
-        // tunnel: "gulp-opencart", //Demonstration page: http://gulp-opencart.localtunnel.me
-    })
+        proxy: proxyURL
+    });
 }
 
-// Custom Styles
-function styles() {
-    return src(`catalog/view/theme/${theme}/${preprocessor}/stylesheet.scss`)
-        .pipe(concat('stylesheet.css'))
-        //.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-        .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
-        .pipe(dest(`catalog/view/theme/${theme}/stylesheet`))
-        .pipe(browserSync.stream())
+function reload(done) {
+    browserSync.reload();
+    done();
 }
 
-// Scripts & JS Libraries
-function scripts() {
-    return src([
-        // 'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i jquery --save-dev)
-        'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i jquery --save-dev)
-        `catalog/view/theme/${theme}/js/app.js` // app.js. Always at the end
-    ])
-        .pipe(concat('app.min.js'))
-        .pipe(uglify()) // Minify JS (opt.)
-        .pipe(dest('catalog/view/javascript'))
-        .pipe(browserSync.stream())
+function css(done) {
+    src([styleSRC,stylesBootstrap,stylesfont_awesome])
+        .pipe(sourcemaps.init())
+        .pipe(
+            sass({
+                errLogToConsole: true,
+                outputStyle: 'compressed'
+            })
+        )
+        .pipe(concatCss('stylesheet.css'))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .on('error', console.error.bind(console))
+        //.pipe(rename({ suffix: '.min' }))
+        .pipe(sourcemaps.write(mapURL))
+        .pipe(dest(styleURL))
+        .pipe(browserSync.stream());
+    done();
 }
 
-// Deploy rsync web-hosting site
-function deploy() {
-    return src('public_html/**')
-        .pipe(rsync({
-            root: '/',
-            hostname: 'user123@domain.com',
-            destination: 'www/domain.com/',
-            include: ['*.htaccess'], // Included files
-            exclude: ['**/Thumbs.db', '**/*.DS_Store', '**/.directory'], // Excluded files
-            recursive: true,
-            archive: true,
-            silent: false,
-            compress: true
-        }))
-    // Documentation: https://pinchukov.net/blog/gulp-rsync.html
+function js(done) {
+    jsFiles.map(function(entry) {
+        return browserify({
+            entries: [jsSRC + entry]
+        })
+            .transform(babelify, { presets: ['@babel/preset-env'] })
+            .bundle()
+            .pipe(source(entry))
+            .pipe(
+                rename({
+                    extname: '.min.js'
+                })
+            )
+            .pipe(buffer())
+            .pipe(gulpif(options.has('production'), stripDebug()))
+            .pipe(sourcemaps.init({ loadMaps: true }))
+            .pipe(uglify())
+            .pipe(sourcemaps.write('.'))
+            .pipe(dest(jsURL))
+            .pipe(browserSync.stream());
+    });
+    done();
 }
 
-// Watching
-function startwatch() {
-    watch(`catalog/view/theme/${theme}/${preprocessor}/stylesheet.scss*`, parallel('styles'));
-    watch(`catalog/view/theme/${theme}/js/**/*.js`, parallel('scripts'));
-    watch([`catalog/view/theme/**/*.${fileswatch}`]).on('change', browserSync.reload);
+function triggerPlumber(src_file, dest_file) {
+    return src(src_file)
+        .pipe(plumber())
+        .pipe(dest(dest_file));
 }
 
-exports.browsersync = browsersync;
-exports.assets      = series(styles, scripts);
-exports.styles      = styles;
-exports.scripts     = scripts;
-exports.deploy      = deploy;
-exports.default     = parallel(styles, scripts, browsersync, startwatch);
+function image() {
+    return triggerPlumber(imgSRC, imgURL);
+}
+
+function fonts() {
+    return triggerPlumber(fontsSRC, fontsURL);
+}
+
+function watch_files() {
+    watch(styleWatch, series(css, reload));
+    watch(jsWatch, series(js, reload));
+    watch(imgWatch, series(image, reload));
+    watch(fontsWatch, series(fonts, reload));
+    watch(twigWatch, series(reload));
+    src(jsURL + 'app.min.js').pipe(
+        notify({ message: 'Gulp is Watching, Happy Coding!' })
+    );
+}
+
+task('css', css);
+task('js', js);
+task('image', image);
+task('fonts', fonts);
+task('default', parallel(css, js, image, fonts));
+task('watch', parallel(browser_sync, watch_files));
+

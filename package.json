@@ -4,20 +4,37 @@
   "description": "Skeleton Opencart Theme",
   "main": "index.php",
   "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babelify": "^10.0.0",
     "browser-sync": "^2.26.12",
+    "browserify": "^16.5.1",
+    "browserify-shim": "^3.8.14",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
     "gulp-less": "^4.0.1",
     "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-options": "^1.1.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.2.0",
     "gulp-rsync": "^0.0.9",
     "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-debug": "^3.0.0",
     "gulp-stylus": "^2.7.0",
-    "gulp-uglify-es": "^2.0.0"
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-uglifycss": "^1.0.9",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
+    "gulp-concat-css": "^3.1.0",
     "jquery": "^3.5.1"
   },
   "scripts": {
